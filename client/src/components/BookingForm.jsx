@@ -17,7 +17,6 @@ const BookingForm = () => {
   };
 
   const handleSubmit = (e) => {
-    console.log("data", formData.date);
     e.preventDefault();
     fetch("http://localhost:8000/api/bookings", {
       method: "POST",
@@ -28,7 +27,6 @@ const BookingForm = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("Booking successful:", data);
         alert(data.message);
         setFormData(initialFormData);
       })
