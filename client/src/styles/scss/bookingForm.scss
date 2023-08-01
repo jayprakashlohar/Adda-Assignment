@@ -9,7 +9,6 @@
     text-align: center;
     padding: 10px;
     font-size: 30px;
-    font-family: sans-serif;
   }
 
   form {
@@ -25,6 +24,9 @@
     width: 100%;
     padding: 10px;
     margin: 5px 0px 10px 0px;
+  }
+  label {
+    font-size: 14px;
   }
 
   button {
