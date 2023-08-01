@@ -1,6 +1,6 @@
-<h1 align="center">Contact management app</h1>
+<h1 align="center">Booking App</h1>
 
-<h3 align="center">It's a Contact management Application</h3>
+<h3 align="center">It's a Booking Application</h3>
 
 <br />
 
@@ -10,13 +10,10 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="reactjs" />
-
-  <img src="https://img.shields.io/badge/Chakra%20UI-3bc7bd?style=for-the-badge&logo=chakraui&logoColor=white" alt="chakra-ui" />
-  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="javascript" />
-  <img src="https://img.shields.io/badge/Rest_API-02303A?style=for-the-badge&logo=react-router&logoColor=white" alt="restAPI" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css3" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html5" />
-
+   <img src="https://img.shields.io/badge/nodejs-E34F26?style=for-the-badge&logo=nodejs&logoColor=white" alt="nodejs" />
+   <img src="https://img.shields.io/badge/expressjs-E34F26?style=for-the-badge&logo=expressjs&logoColor=white" alt="expressjs"/>
+   <img src="https://img.shields.io/badge/mongodb-E34F26?style=for-the-badge&logo=mongodb&logoColor=white" alt="mongodb"/>
+    <img src="https://img.shields.io/badge/scss-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="scss" />
 </p>
 
 <h4 align="center">Deployed On:</h4>
@@ -28,19 +25,16 @@
 
 <br />
 
-## Add Contact
+## Booking Form
 
-<img src="contact-phonebook/src/assets/addContact.png">
+<img src="client/src/assets/bookingForm.png">
 
 <br />
 
-## Home Page
+## Booking Status
 
-<img src="contact-phonebook/src/assets/phonebookHome.png">
+<img src="client/src/assets/bookingStatus.png">
 <br />
-
-
-
 
 ## Getting Started
 
@@ -49,12 +43,12 @@
 1. Clone the repository to your local machine.
 2. Install the required dependencies by running npm install.
 3. Start the backend server by running npm run start.
-4. Start the frontend server by running npm run start.
+4. Start the frontend server by running npm run dev.
 5. Open your browser and navigate to http://localhost:5173 to view the app.
 
 # Deployed Link
 
 ### Frontend
-
 https://custom-phonebook.netlify.app/
 
+### Backend
