@@ -1,7 +1,9 @@
 const BookingForm = () => {
   return (
     <>
-      <div></div>
+      <div>
+        
+      </div>
     </>
   );
 };

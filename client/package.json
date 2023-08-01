@@ -4,14 +4,20 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
+    "dev": "npm-run-all -p watch:css start",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "watch:css": "node-sass src/styles/scss/ -o src/styles/css/ --watch --recursive"
   },
   "dependencies": {
+    "node-sass": "^9.0.0",
+    "npm-run-all": "^4.1.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.2",
+    "sass": "^1.64.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
