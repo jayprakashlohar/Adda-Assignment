@@ -34,12 +34,12 @@ const BookingStatus = () => {
             {bookings?.map((booking) => (
               <tr key={booking._id}>
                 <td>{booking.facilityType}</td>
-                <td>{booking.date}</td>
+                <td>{new Date(booking.date).toLocaleDateString()}</td>
                 <td>{booking.startTime}</td>
                 <td>{booking.endTime}</td>
                 <td>{booking.user}</td>
                 <td>{booking.status}</td>
-                <td>{booking.amount}</td>
+                <td>Rs.{booking.amount}</td>
               </tr>
             ))}
           </tbody>

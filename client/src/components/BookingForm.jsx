@@ -119,6 +119,7 @@ const BookingForm = () => {
   };
 
   const handleSubmit = (e) => {
+    console.log("data", formData.date);
     e.preventDefault();
     fetch("http://localhost:8000/api/bookings", {
       method: "POST",
@@ -131,7 +132,7 @@ const BookingForm = () => {
       .then((data) => {
         console.log("Booking successful:", data);
         alert(data.message);
-        setFormData(initialFormData); // Reset the form fields after successful booking
+        setFormData(initialFormData);
       })
       .catch((error) => {
         console.error("Booking failed:", error);
