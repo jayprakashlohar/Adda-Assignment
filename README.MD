@@ -49,6 +49,8 @@
 # Deployed Link
 
 ### Frontend
-https://custom-phonebook.netlify.app/
+https://adda-orignal.netlify.app/
 
 ### Backend
+
+https://adda-server-2ql6.onrender.com

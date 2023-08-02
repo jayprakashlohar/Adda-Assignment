@@ -2,12 +2,15 @@ import { useState, useEffect } from "react";
 
 const BookingStatus = () => {
   const [bookings, setBookings] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/bookings")
+    setIsLoading(true);
+    fetch("https://adda-server-2ql6.onrender.com/api/bookings")
       .then((response) => response.json())
       .then((data) => {
         setBookings(data.data);
+        setIsLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching bookings:", error);
@@ -18,6 +21,8 @@ const BookingStatus = () => {
     <>
       <div>
         <h2 className="statusHeading">Booking Status</h2>
+        <div className="loading">{isLoading && <h2>Loading...</h2>}</div>
+
         <table>
           <thead>
             <tr>
