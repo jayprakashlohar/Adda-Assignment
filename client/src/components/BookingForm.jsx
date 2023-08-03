@@ -1,6 +1,9 @@
 import { useState } from "react";
 
+const API_BASE_URL = "https://adda-server-2ql6.onrender.com/api/bookings";
+
 const BookingForm = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const initialFormData = {
     facilityType: "",
     date: "",
@@ -18,7 +21,8 @@ const BookingForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("https://adda-server-2ql6.onrender.com/api/bookings", {
+    setIsLoading(true);
+    fetch(API_BASE_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -27,11 +31,13 @@ const BookingForm = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        alert(data.message);
+        setIsLoading(false);
+        alert(`${data.message},Your booking amount is Rs.${data.data.amount}`);
         setFormData(initialFormData);
       })
       .catch((error) => {
         console.error("Booking failed:", error);
+        setIsLoading(false);
       });
   };
 
@@ -91,10 +97,13 @@ const BookingForm = () => {
               placeholder="Enter your name"
               value={formData.user}
               onChange={handleChange}
-              required
+              required={true}
             />
           </div>
-          <button type="submit">Book Now</button>
+          <button type="submit" disabled={isLoading}>
+            {" "}
+            {isLoading ? "Please wait..." : "Book Now"}
+          </button>
         </form>
       </div>
     </>
